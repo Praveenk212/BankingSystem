@@ -1,0 +1,29 @@
+<div>
+<ng-container *ngFor="let ar of appcomponent.userInfoDb">
+    <tr *ngIf="custfun.username==ar.userName" id="top">
+        <h1 style="text-align: center; background-color:aqua; color: blue; ">Personal detail of {{ar.custName}}</h1>
+    </tr>
+</ng-container>
+</div>
+<table id="table">
+    <tr style="background-color: burlywood;">
+        <td style="background-color: burlywood;">Customer Name</td>
+        <td style="background-color: burlywood;">Age</td>
+        <td style="background-color: burlywood;">Gender</td>
+        <td style="background-color: burlywood;">EmailId</td>
+        <td style="background-color: burlywood;">Address</td>
+        <td style="background-color: burlywood;">AadharNo</td>
+        <td style="background-color: burlywood;">PhoneNo</td>
+    </tr>
+    <ng-container *ngFor="let ar of appcomponent.userInfoDb">
+        <tr *ngIf="custfun.username==ar.userName">
+            <td>{{ar.custName}}</td>
+            <td>{{ar.age}}</td>
+            <td>{{ar.gender}}</td>
+            <td>{{ar.emailId}}</td>
+            <td>{{ar.address}}</td>
+            <td>{{ar.aadharNo}}</td>
+            <td>{{ar.phoneNo}}</td>
+        </tr>
+    </ng-container>
+</table>

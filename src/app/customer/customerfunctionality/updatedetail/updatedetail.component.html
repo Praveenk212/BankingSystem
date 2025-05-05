@@ -1,0 +1,83 @@
+<div>
+    <ng-container *ngFor="let ar of appcomponent.userInfoDb">
+        <tr *ngIf="custfun.username==ar.userName" id="top">
+            <h1 style="text-align: center; background: rgb(41, 141, 207);">Personal detail of {{ar.custName}}</h1>
+        </tr>
+    </ng-container>
+    </div>
+    <table id="table">
+        <tr style="background-color: burlywood;">
+            <td style="background-color: burlywood;">Customer Name</td>
+            <td style="background-color: burlywood;">Age</td>
+            <td style="background-color: burlywood;">Gender</td>
+            <td style="background-color: burlywood;">EmailId</td>
+            <td style="background-color: burlywood;">Address</td>
+            <td style="background-color: burlywood;">AadharNo</td>
+            <td style="background-color: burlywood;">PhoneNo</td>
+            <td style="background-color: burlywood;">Update</td>
+        </tr>
+        <ng-container *ngFor="let ar of appcomponent.userInfoDb">
+            <tr *ngIf="custfun.username==ar.userName">
+                <td>{{ar.custName}}</td>
+                <td>{{ar.age}}</td>
+                <td>{{ar.gender}}</td>
+                <td>{{ar.emailId}}</td>
+                <td>{{ar.address}}</td>
+                <td>{{ar.aadharNo}}</td>
+                <td>{{ar.phoneNo}}</td>
+                <td><input type="button" value="Personal Detail" id="update" (click)="formupdate(ar)">
+                    <input type="button" value="Password" id="update" (click)="updatePassWordForm(ar)">
+                </td>
+            </tr>
+        </ng-container>
+    </table>
+
+   <div *ngIf="!detailSubmitted">
+    <form id="hide" >
+        <h1 style="text-align: center; background: rgb(41, 141, 207);">Form to update detail</h1>
+        <table align="center">
+            <tr>
+                <td>Customer Name</td>
+                <td><input type="text" name="custName" value="custName" [(ngModel)]="custName" ></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="text" name="age" [(ngModel)]="age" ></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="text" name="gender" [(ngModel)]="gender" ></td>
+            </tr>
+            <tr>
+                <td>Email Id</td>
+                <td><input type="text" name="emailId" [(ngModel)]="emailId" ></td>
+            </tr>
+            <tr>
+                <td>Aadhar Number</td>
+                <td><input type="text" name="aadharNo" [(ngModel)]="aadharNo"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="phoneNo" [(ngModel)]="phoneNo"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Update Data" (click)="updateDetail()"></td>
+                
+            </tr>
+        </table>
+    </form>
+</div>
+
+   <div *ngIf="!paswordSubmitted">
+    <form id="hidepass">
+        <h1 style="text-align: center; background: rgb(41, 141, 207);">Update PassWord</h1>
+        <table align="center">
+            <tr>
+                <td>PassWord</td>
+                <td><input type="text" name="passWord" value="passWord" [(ngModel)]="passWord" ></td>
+
+                <td colspan="2"><input type="button" value="Update passWord" (click)="updatePassWord()"></td>
+            </tr>
+        </table>
+    </form>
+</div>

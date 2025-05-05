@@ -1,0 +1,29 @@
+<div>
+    <ng-container *ngFor="let ar of appcomponent.userInfoDb">
+        <tr *ngIf="customerfunctionalitycomponent.username==ar.userName" id="top">
+            <h1 style="text-align: center; background: aqua; color: blue;">Transaction detail of {{ar.custName}}</h1>
+        </tr>
+    </ng-container>
+    </div>
+<div>
+    </div>
+    <table id="table">
+        <tr style="background-color: burlywood;">
+            <td style="background-color: burlywood;">Amount Transfer</td>
+            <td style="background-color: burlywood;">Date</td>
+            <td style="background-color: burlywood;">Amount Received </td>
+            <td style="background-color: burlywood;">senderAccountNumber</td>
+            <td style="background-color: burlywood;">receiverAccountNumber</td>
+        </tr>
+
+        <ng-container *ngFor="let ar of appcomponent.transactionDb">
+            <tr *ngIf="customerfunctionalitycomponent.username==ar.userName">
+                <td> {{ar.amtTransfer}}</td>
+                <td> {{ar.date}}</td>
+                <td> {{ar.amtReceived}}</td>
+                <td>{{ar.senderAccountNumber}}</td>
+                <td>{{ar.receiverAccountNumber}}</td>
+            </tr>
+        </ng-container>
+    </table>
+    

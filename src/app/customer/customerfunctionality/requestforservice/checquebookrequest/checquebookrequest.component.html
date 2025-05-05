@@ -1,0 +1,7 @@
+<h1>ChecqueBook Request Submitted</h1>
+<br>
+<ng-container *ngFor="let ar of appcomponent.accountDb">
+    <tr *ngIf="customerfuncomp.username==ar.userName">
+        <h2>Your Request Id is <td>{{ar.checqueBookId}}</td></h2>
+    </tr>
+</ng-container>

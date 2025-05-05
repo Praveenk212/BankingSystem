@@ -1,0 +1,16 @@
+<ng-container *ngFor="let ar of appcomponent.userInfoDb">
+    <tr *ngIf="customerfuncomp.username==ar.userName" id="top">
+        <h1 style="text-align: center; background: aqua; color: blue;">Welcome {{ar.custName}}</h1>
+    </tr>
+</ng-container>
+    <div id="nav">
+                <br>
+                <a routerLink="creditcardrequest"  class="link1">Request For credit card </a>
+                <br>
+                <a routerLink="checquebookrequest"  class="link1">Request for checque Book</a>
+                <br>
+        <br class="clear" />
+    </div>
+    <div  id="txt" align="center">
+        <router-outlet></router-outlet>
+    </div>

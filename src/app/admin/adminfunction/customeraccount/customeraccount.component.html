@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div *ngIf="!addedSucessfully">
+    <h3 style="text-align: center; background: rgba(10,127,153,0.8);">New User Form :</h3><br>
+    <table style="background-color: aqua;" id="table" align="center">
+        <tr>
+            <td>UserName: </td>
+            <td><input type="text" [(ngModel)]="userName" id="userName" required></td>
+        </tr>
+        <tr>
+            <td>PassWord: </td>
+            <td><input type="password" [(ngModel)]="passWord" id="passWord" required></td>
+        </tr>
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" [(ngModel)]="custName" id="custName" required></td>
+        </tr>
+        <tr>
+            <td>Age: </td>
+            <td><input type="text" [(ngModel)]="age" id="age" required></td>
+        </tr>
+        <tr>
+            <td>Gender: </td>
+            <td><input type="text" [(ngModel)]="gender" id="gender" required></td>
+        </tr>
+        <tr>
+            <td>EmailID: </td>
+            <td><input type="text" [(ngModel)]="emailId" id="emailId" required></td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input type="text" [(ngModel)]="address" id="address" required></td>
+        </tr>
+        <tr>
+            <td>Aadhar Number: </td>
+            <td><input type="text" [(ngModel)]="aadharNo" id="aadharNo" required></td>
+        </tr>
+        <tr>
+            <td>Phone Number: </td>
+            <td><input type="text" [(ngModel)]="phoneNo" id="phoneNo" required></td>
+        </tr>
+
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" value="Submit" (click)="submit()">
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+</html>

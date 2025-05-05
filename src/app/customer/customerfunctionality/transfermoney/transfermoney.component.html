@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; background: rgb(41, 141, 207);">Transfer Money to an account</h1>
+    <h3 style="text-align: center;"></h3>
+    <table id="table" align="center">
+        <tr>
+            <td>Amount: </td>
+            <td><input type="text" [(ngModel)]="amount" id="amount" required></td>
+        </tr>
+        <tr>
+            <td>Account Number: </td>
+            <td><input type="text" [(ngModel)]="receiveraccountNumber" id="receiveraccountNumber" required></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="submit" value="Transfer" (click)="transferMoney()">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

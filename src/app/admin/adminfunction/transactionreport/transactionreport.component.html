@@ -1,0 +1,20 @@
+<div>
+    <h1 style="text-align: center; background: rgb(41, 141, 207);">Transaction Report</h1>
+    </div>
+    <table id="table">
+        <tr style="background-color: burlywood;">
+            <td style="background-color: burlywood;">Amount Transfer</td>
+            <td style="background-color: burlywood;">Date</td>
+            <td style="background-color: burlywood;">Amount Received </td>
+            <td style="background-color: burlywood;">senderAccountNumber</td>
+            <td style="background-color: burlywood;">receiverAccountNumber</td>
+        </tr>
+            <tr *ngFor="let ar of appcomponent.transactionDb">
+                <td> {{ar.amtTransfer}}</td>
+                <td>  {{ar.date}}</td>
+                <td>  {{ar.amtReceived}}</td>
+                <td>{{ar.senderAccountNumber}}</td>
+                <td>{{ar.receiverAccountNumber}}</td>
+            </tr>
+    </table>
+    

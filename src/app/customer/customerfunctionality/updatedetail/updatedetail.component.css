@@ -1,0 +1,24 @@
+#table
+{
+    border: black;
+    border-style: double;
+    background-color: coral;
+}
+tr{
+    border: black;
+    border-style: solid;
+    background: aqua;
+}
+td{
+    border: black;
+    border-style: solid;
+    background: aqua;
+}
+#hide
+{
+    display: none;
+}
+#hidepass
+{
+    display:none;
+}

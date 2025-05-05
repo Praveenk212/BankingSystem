@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <h1 style="text-align: center; background: rgb(41, 141, 207);">Admin Functionality</h1>
+    <div id="nav">
+                <a routerLink="customerlist"  class="link1">Customer List </a>
+                <br>
+                <a routerLink="addmoney"  class="link1">Add Money to an account </a>
+                <br>
+                <a routerLink="customeraccount"  class="link1">Create a customer account </a>
+                <br>
+                <a routerLink="transactionreport"  class="link1">Transation Report </a>
+                <br>
+                <a routerLink="pendingservicerequest"  class="link1">Pending service request </a>
+                <br>
+                <a routerLink=""  class="link1"  (click)=logout()>Logout </a>
+        <br class="clear" />
+    </div>
+    <div  id="txt" align="center">
+        <router-outlet></router-outlet>
+    </div>
+
+    
+</body>
+</html>

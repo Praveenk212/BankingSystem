@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 style="text-align: center; background: rgba(10,127,153,0.8);">New User Form :</h3><br>
+    <table style="background-color: aqua;" id="table" align="center">
+        <tr>
+            <td>UserName: </td>
+            <td><input type="text" [(ngModel)]="userName" id="userName" required minlength="4"></td>
+        </tr>
+        <tr>
+            <td>PassWord: </td>
+            <td><input type="password" [(ngModel)]="passWord" id="passWord" required minlength="6"></td>
+        </tr>
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" [(ngModel)]="custName" id="custName" required minlength="2"></td>
+        </tr>
+        <tr>
+            <td>Age: </td>
+            <td><input type="text" [(ngModel)]="age" id="age" required minlength="1"></td>
+        </tr>
+        <tr>
+            <td>Gender: </td>
+            <td><input type="text" [(ngModel)]="gender" id="gender" required minlength="1"></td>
+        </tr>
+        <tr>
+            <td>EmailID: </td>
+            <td><input type="text" [(ngModel)]="emailId" id="emailId" required minlength="12"></td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input type="text" [(ngModel)]="address" id="address" required minlength="4"></td>
+        </tr>
+        <tr>
+            <td>Aadhar Number: </td>
+            <td><input type="text" [(ngModel)]="aadharNo" id="aadharNo" required minlength="12" required maxlength="12"></td>
+        </tr>
+        <tr>
+            <td>Phone Number: </td>
+            <td><input type="text" [(ngModel)]="phoneNo" id="phoneNo" required required minlength="10" required maxlength="10"></td>
+        </tr>
+
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" value="Submit" (click)="submit()">
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html> -->
+
+
+<div class="form-container">
+    <form class="form-signin" [formGroup]="customerData" (ngSubmit)="submit()">
+        <h1 class="h3 mb-3 font-weight-normal">New User Form :</h1>
+        <br>
+
+        <label for="inputuserName" class="sr-only">User Name</label>
+        <input type="text" id="inputuserName" class="form-control" placeholder="User Name" required autofocus
+            formControlName="userName">
+            <br>
+
+        <label for="inputpassWord" class="sr-only">Password</label>
+        <input type="passWord" id="inputpassWord" class="form-control" placeholder="Password" required
+            formControlName="passWord">
+            <br>
+
+        <label for="inputcustName" class="sr-only">Customer Name</label>
+        <input type="text" id="inputcustName" class="form-control" placeholder="Customer name" required
+            formControlName="custName">
+            <br>
+
+        <label for="inputage" class="sr-only">Age</label>
+        <input type="text" id="inputage" class="form-control" placeholder="Age" required
+            formControlName="age">
+            <br>
+
+        <label for="inputgender" class="sr-only">Gender</label>
+        <input type="text" id="inputgender" class="form-control" placeholder="Gender" required
+            formControlName="gender">
+            <br>
+
+        <label for="inputemailId" class="sr-only">Email Id</label>
+        <input type="email" id="inputemailId" class="form-control" placeholder="Email Id" required
+            formControlName="emailId">
+            <br>
+
+        <label for="inputaddress" class="sr-only">Address</label>
+        <input type="address" id="inputaddress" class="form-control" placeholder="Address" required
+            formControlName="address">
+            <br>
+
+        <label for="inputaadharNo" class="sr-only">Aadhar Number</label>
+        <input type="text" id="inputaadharNo" class="form-control" placeholder="aadharNo" required
+            formControlName="aadharNo">
+            <br>
+
+        <label for="inputphoneNo" class="sr-only">Phone Number</label>
+        <input type="text" id="inputphoneNo" class="form-control" placeholder="Phone Number" required
+            formControlName="phoneNo">
+            <br>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <br>
+        <button class="btn btn-lg btn-danger btn-block" type="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div>
+    <h1 style="text-align: center; background: rgb(41, 141, 207);">Customer list of Pending service request </h1>
+    </div>
+    <table id="table">
+        <tr style="background-color: burlywood;">
+            <td style="background-color: burlywood;">Account Number</td>
+            <td style="background-color: burlywood;">Balance</td>
+            <td style="background-color: burlywood;">UserName</td>
+            <td style="background-color: burlywood;">checqueBookId</td>
+            <td style="background-color: burlywood;">creditCardId</td>
+            <td style="background-color: burlywood;" *ngIf="!approvedchecque">Cheque Book action</td>
+            <td style="background-color: burlywood;" *ngIf="!approvedcredit">CreditCard action</td>
+    
+        </tr>
+        <ng-container *ngFor="let ar of appcomponent.accountDb">
+            <tr *ngIf="(ar.checqueBookId!=0  || ar.creditCardId!=0 )&& (ar.serviceIdForChecqueBook==0  || ar.serviceIdForCreditCard==0)" >
+                <td>{{ar.accNo}}</td>
+                <td>{{ar.balance}}</td>
+                <td>{{ar.userName}}</td>
+                <td>{{ar.checqueBookId}}</td>
+                <td>{{ar.creditCardId}}</td>
+                <td *ngIf="!approvedchecque"><input type="submit" value="Approve Or Reject" id="submit" name="submit" (click)=approveorrejectchecquebook(ar)></td>
+                <td *ngIf="!approvedcredit"><input type="submit" value="Approve Or Reject" id="submit" name="submit" (click)=approveorrejectcreditcard(ar)></td>
+            </tr>
+        </ng-container>
+    </table>
+    

@@ -1,0 +1,16 @@
+<div>
+<h1 style="text-align: center; background: rgb(41, 141, 207);">Customer list</h1>
+</div>
+<table id="table">
+    <tr style="background-color: burlywood;">
+        <td style="background-color: burlywood;">Account Number</td>
+        <td style="background-color: burlywood;">Balance</td>
+        <td style="background-color: burlywood;">UserName</td>
+
+    </tr>
+        <tr *ngFor="let ar of appcomponent.accountDb">
+            <td>{{ar.accNo}}</td>
+            <td>{{ar.balance}}</td>
+            <td>{{ar.userName}}</td>
+        </tr>
+</table>

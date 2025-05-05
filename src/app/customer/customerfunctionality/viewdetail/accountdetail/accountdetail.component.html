@@ -1,0 +1,19 @@
+<div>
+<ng-container *ngFor="let ar of appcomponent.userInfoDb">
+    <tr *ngIf="custfun.username==ar.userName" id="top">
+        <h1 style="text-align: center; background: aqua; color: blue;">Account detail of {{ar.custName}}</h1>
+    </tr>
+</ng-container>
+</div>
+<table id="table">
+    <tr style="background-color: burlywood;">
+        <td style="background-color: burlywood;">Account Number</td>
+        <td style="background-color: burlywood;">Balance</td>
+    </tr>
+    <ng-container *ngFor="let ar of appcomponent.accountDb">
+        <tr *ngIf="custfun.username==ar.userName">
+            <td>{{ar.accNo}}</td>
+            <td>{{ar.balance}}</td>
+        </tr>
+    </ng-container>
+</table>

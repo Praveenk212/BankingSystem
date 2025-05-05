@@ -1,0 +1,22 @@
+<ng-container *ngFor="let ar of appcomponent.userInfoDb">
+    <tr *ngIf="username==ar.userName" id="top">
+        <h1 style="text-align: center; background: aqua; color: blue;">Welcome {{ar.custName}}</h1>
+    </tr>
+</ng-container>
+    <div id="nav">
+        <a routerLink="viewdetail"  class="link1">View Detail </a>
+                <br>
+                <a routerLink="transfermoney"  class="link1">Transaction </a>
+                <br>
+                <a routerLink="updatedetail"  class="link1">Update Personal detail</a>
+                <br>
+                <a routerLink="requestforservice"  class="link1">Request for service </a>
+                <br>
+                <a routerLink="statusofservicerequest"  class="link1">Service Request Status</a>
+                <br>
+                <a routerLink=""  (click)=logout() >Logout</a>
+        <br class="clear" />
+    </div>
+    <div  id="txt" align="center">
+        <router-outlet></router-outlet>
+    </div>
